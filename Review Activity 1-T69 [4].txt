@@ -1,0 +1,78 @@
+  
+int main()
+{
+
+    int accounts[3][2] ={
+        {123, 123},
+        {456, 456},
+        {789, 789}
+    // a simple login program where the user inputs ID # and
+    // PIN and if the credentials are correct.
+
+    // 2D Array
+
+    int accnt[3][2] ={
+        {1111, 123},
+        {2222, 456},
+        {3333, 789}
+    };
+
+    // Declaration
+
+    int iDInput, PinInput, valiDiDChecker, validPinChecker;
+
+    int idInput, PinInput, validIDChecker, validPINChecker;
+
+
+    // Input ID
+
+        printf("Enter ID number: ");
+   validIDChecker = scanf("%d", &idInput);
+
+        printf("\nEnter PIN: ");
+   validPINChecker = scanf("%d", &PinInput);
+
+    if(validIDChecker != 1 || validPINChecker != 1){
+        system("cls");
+        printf("\n\nInvalid ID!/PIN\n\n\n");
+   valiDiDChecker = scanf("%d", &iDInput);
+
+    // Input PIN
+
+        printf("Enter PIN: ");
+   validPinChecker = scanf("%d", &PinInput);
+
+
+
+    if(valiDiDChecker != 1 || validPinChecker != 1){
+
+
+        printf("\nInvalid ID!/PIN\n");
+        return 0;
+    }
+     if(validIDChecker == 1 && validPINChecker == 1){
+        if(idInput == accounts[0][0] && PinInput == accounts[0][1] ||
+           idInput == accounts[1][0] && PinInput == accounts[1][1] ||
+           idInput == accounts[2][0] && PinInput == accounts[2][1] ){
+            system("cls");
+            printf("\nYou have Successfully Logged In!\n\n");
+            printf("%d: %d \n\n\n\n", idInput, PinInput);
+
+    // Checker for ID & PIN
+
+     if(valiDiDChecker == 1 && validPinChecker == 1){
+        if(iDInput == accnt[0][0] && PinInput == accnt[0][1] ||
+           iDInput == accnt[1][0] && PinInput == accnt[1][1] ||
+           iDInput == accnt[2][0] && PinInput == accnt[2][1] ){
+
+    // Output
+            printf("\nYou have successfully Logged in\n");
+            printf("ID#: %d\n\n", iDInput);
+        }else{
+            system("cls");
+            printf("\n\nInvalid ID!/PIN\n\n\n");
+
+            printf("\n\nInvalid ID/PIN!\n\n\n");
+            return 0;
+        }
+    }
