@@ -1,0 +1,36 @@
+  
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char first_name[20];
+    char last_name[20];
+
+    int age;
+
+    printf("Enter name: ");
+    scanf("%s %s", first_name, last_name);
+
+    printf("Enter age: ");
+    int check = scanf("%d", &age);
+    system("cls");
+
+    if(check == 1){
+        if(age<18){
+            printf("Name: %s %s", first_name, last_name);
+            printf("\nAge: %d", age);
+            printf("\nYou are not eligible for voting.");
+            return 0;
+        }else{
+            printf("Name: %s %s", first_name, last_name);
+            printf("\nAge: %d", age);
+            printf("\nYou are eligible for voting.");
+            return 0;
+        }
+    }
+            printf("Name: %s %s", first_name, last_name);
+            printf("Invalid Age, Please Try Again.");
+
+    return 0;
+}
