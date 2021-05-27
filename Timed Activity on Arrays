@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    // a simple login program where the user inputs ID # and
+    // PIN and if the credentials are correct.
+    
+    // 2D Array
+    
+    int accnt[3][2] ={
+        {1111, 123},
+        {2222, 456},
+        {3333, 789}
+    };
+    
+    // Declaration
+    
+    int iDInput, PinInput, valiDiDChecker, validPinChecker;
+
+    // Input ID
+    
+        printf("Enter ID number: ");
+   valiDiDChecker = scanf("%d", &iDInput);
+   
+    // Input PIN
+    
+        printf("Enter PIN: ");
+   validPinChecker = scanf("%d", &PinInput);
+
+    
+    
+    if(valiDiDChecker != 1 || validPinChecker != 1){
+    
+    
+        printf("\nInvalid ID!/PIN\n");
+        return 0;
+    }
+    
+    // Checker for ID & PIN
+    
+     if(valiDiDChecker == 1 && validPinChecker == 1){
+        if(iDInput == accnt[0][0] && PinInput == accnt[0][1] ||
+           iDInput == accnt[1][0] && PinInput == accnt[1][1] ||
+           iDInput == accnt[2][0] && PinInput == accnt[2][1] ){
+            
+    // Output
+            printf("\nYou have successfully Logged in\n");
+            printf("ID#: %d\n\n", iDInput);
+        }else{
+            
+            printf("\n\nInvalid ID/PIN!\n\n\n");
+            return 0;
+        }
+    }
+
+
+      return 0;
+}
