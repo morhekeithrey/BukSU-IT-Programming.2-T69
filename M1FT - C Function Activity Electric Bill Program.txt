@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+void main()
+{
+   int custid, ucon;
+   float chg, surchg,uchg,totbill;
+
+   printf("Input Customer ID :");
+   scanf("%d",&custid);
+   printf("Input the unit consumed by the customer : ");
+   scanf("%d",&ucon);
+   if (ucon <199 )
+	chg = 1.50;
+   else	if (ucon>=250 && ucon<400)
+		chg = 1.60;
+	else if (ucon>=450 && ucon<600)
+			chg = 1.85;
+		else
+			chg = 2.00;
+   uchg= ucon*chg;
+   surchg=uchg/10;
+   totbill=uchg+surchg;
+   printf("\nElectricity Bill\n");
+   printf("Customer ID#                        :%d\n",custid);
+   printf("unit Consumed                       :%d\n",ucon);
+   printf("unit Charges @P. 2.00  per unit     :%8.2f\n",uchg);
+   printf("Surchage Amount                     :%8.2f\n",surchg);
+   printf("Total Cusmoter Bill                 :%8.2f\n",totbill);
+
+}
